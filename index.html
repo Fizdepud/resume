@@ -40,61 +40,9 @@
       </nav>
       <section>
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Содержание.</h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p><script>
-	var qwe = '';
-		function get_rand(min,max){
-			var r = min - 0.5 + Math.random()*(max-min+1);
-			return Math.round(r);
-		}
-		function do_it(){
-			var sssr = '<table id="Table" border = "1">';
-			for (var i=1; i < 20; i++){
-				sssr = sssr + '<tr>';
-				for (var j=1; j < 20; j++){
-					sssr = sssr + '<td>'+get_rand(0,400)+'</td>';
-				}
-				sssr = sssr + '</tr>';
-			}
-			sssr = sssr + '</table>';
-			document.getElementById('pole').innerHTML = sssr;
-		}
-		
-		function show(){
-			var table = document.getElementById('Table');
-			for (var i=0; i<table.rows.length; i++) {
-				for (var j=0; j<table.rows[0].cells.length; j++) {
-					var TD=table.rows[i].cells[j];
-					var sssr = TD.innerHTML;
-					
-					for (var q=0; q<sssr.length-1; q++) {
-						if (sssr[q] == sssr[q+1]) {
-							qwe = qwe+sssr[q];	
-						} else {
-							q = 20;
-							qwe = '';
-						}
-						
-					}
-					
-					 if (qwe != '') {
-						TD.style.backgroundColor = "green";
-					 }
-					qwe = '';
-					
-				}
-			}
-		}
-	</script>
-</head>
-<body>
-	<input type="button" id="push" value="Конпка" onClick="do_it()"  >
-	<input type="button" id="push" value="Конпка2" onClick="show()"  >
-	<div id="pole">
-		
-	</div>
-</body></p>
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
