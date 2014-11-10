@@ -1,1 +1,87 @@
-gggg
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>canvas</title>
+  <meta charset="utf-8">
+
+  <canvas id="smile" width="1000" height="1000">
+    <p>Ваш браузер не поддерживает рисование.</p>
+  </canvas>
+
+<script type="text/javascript">
+    var myCanvas = document.getElementById('smile');
+
+     var cxt = myCanvas.getContext('2d');
+
+        cxt.strokeStyle = 'blue';
+	cxt.lineWidth = 1;
+	cxt.lineTo(100,420);
+	cxt.lineTo(100,40);
+	cxt.stroke();
+   
+
+        cxt.strokeStyle = 'blue';
+	cxt.lineWidth = 1;
+	cxt.lineTo(480,40);
+	cxt.lineTo(480,420);
+	cxt.stroke();
+
+	cxt.strokeStyle = 'blue';
+	cxt.lineWidth = 1;
+	cxt.lineTo(420,420);
+	cxt.lineTo(100,420);
+	cxt.stroke();
+
+
+        cxt.fillRect(101,41,378,378);
+
+	cxt.fillStyle='#00FFFF';
+        cxt.fillRect(131,71,318,318);
+
+	cxt.fillStyle='#0000FF';
+        cxt.fillRect(151,91,278,278);
+
+        cxt.fillStyle='#FF0000';
+        cxt.fillRect(171,111,238,238);
+
+        cxt.fillStyle='#FFEFDB';
+        cxt.fillRect(191,131,198,198);
+
+        cxt.fillStyle='#00CD00';
+        cxt.fillRect(211,151,158,158);
+
+        cxt.fillStyle='#0000CD';
+        cxt.fillRect(231,171,118,118);
+
+        cxt.fillStyle='#FF34B3';
+        cxt.fillRect(251,191,78,78);
+
+
+
+        cxt.strokeStyle = 'blue';
+	cxt.lineWidth = 1;
+        cxt.moveTo(190,130);
+	cxt.lineTo(190,130);
+	cxt.stroke();
+
+	cxt.strokeStyle = 'blue';
+	cxt.lineWidth = 1;
+	cxt.lineTo(390,130);
+	cxt.lineTo(390,330);
+        cxt.lineTo(190,330);
+        cxt.lineTo(190,130);
+	cxt.stroke();
+
+	cxt.strokeStyle = 'blue';
+	cxt.lineWidth = 1;
+        cxt.moveTo(210,150);
+	cxt.lineTo(370,150);
+	cxt.lineTo(370,310);
+        cxt.lineTo(210,310);
+        cxt.lineTo(210,150);
+	cxt.stroke();
+  </script>
+ </head>
+ <body>
+</html>
+  
