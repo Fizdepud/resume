@@ -3,8 +3,8 @@
  <head>
   <title>canvas</title>
   <meta charset="utf-8">
-
-  <canvas id="smile" width="1000" height="1000">
+<center>
+  <canvas id="smile" width="800" height="800">
     <p>Ваш браузер не поддерживает рисование.</p>
   </canvas>
 
@@ -12,76 +12,93 @@
     var myCanvas = document.getElementById('smile');
 
      var cxt = myCanvas.getContext('2d');
+	  // Рисуем прямоугольник
+ 	cxt.fillStyle="#696969";
+	cxt.fillRect(5,125,450,450);
 
-        cxt.strokeStyle = 'blue';
-	cxt.lineWidth = 1;
-	cxt.lineTo(100,420);
-	cxt.lineTo(100,40);
+	// Рисуем левую окружность 
+     cxt.beginPath();
+	 cxt.lineWidth = 5;
+     cxt.strokeStyle = "#fc0";
+     //cxt.fillStyle = "#fc0";
+     cxt.arc(220,300,100,200,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+	
+    // Рисуем правую окружность 
+     cxt.beginPath();
+	 cxt.lineWidth = 5;
+     cxt.strokeStyle = "#fc0";
+     //cxt.fillStyle = "#fc0";
+     cxt.arc(200,300,100,200,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+     
+	 // окружность по середине
+     cxt.beginPath();
+	 cxt.strokeStyle = "#3CB371";
+     cxt.arc(210,300,10,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+	 //верхняя окружность
+	 cxt.beginPath();
+	 cxt.strokeStyle = '#fc0';
+     cxt.arc(210,225,10,0,Math.PI*2,true);
+     cxt.closePath();
+	 cxt.stroke();
+     
+	 //нижняя окружность
+	 cxt.beginPath();
+     cxt.arc(210,370,10,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+	 
+	  //правая окружность по середине
+	 cxt.beginPath();
+     cxt.arc(270,300,10,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+	 
+	  //левая окружность по середине
+	 cxt.beginPath();
+     cxt.arc(145,300,10,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+	 
+	 //левая окр.внизу
+	 cxt.beginPath();
+	 cxt.strokeStyle = '#3CB371';
+     cxt.arc(170,410,15,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+	 
+	 //правая окр.внизу
+	 cxt.beginPath();
+     cxt.arc(250,408,15,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+	 
+	 //самая верхняя окружность
+	 cxt.beginPath();
+	 cxt.strokeStyle = 'red';
+     cxt.arc(210,190,15,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+
+	// стрелки 
+
+   cxt.beginPath();
+   cxt.strokeStyle = 'yellow';
+	cxt.moveTo(218,290);
+	cxt.lineTo(265,250);
+	cxt.moveTo(218,310);
+	cxt.lineTo(250,370);
+	cxt.closePath();
 	cxt.stroke();
    
 
-        cxt.strokeStyle = 'blue';
-	cxt.lineWidth = 1;
-	cxt.lineTo(480,40);
-	cxt.lineTo(480,420);
-	cxt.stroke();
-
-	cxt.strokeStyle = 'blue';
-	cxt.lineWidth = 1;
-	cxt.lineTo(420,420);
-	cxt.lineTo(100,420);
-	cxt.stroke();
-
-
-        cxt.fillRect(101,41,378,378);
-
-	cxt.fillStyle='#00FFFF';
-        cxt.fillRect(131,71,318,318);
-
-	cxt.fillStyle='#0000FF';
-        cxt.fillRect(151,91,278,278);
-
-        cxt.fillStyle='#FF0000';
-        cxt.fillRect(171,111,238,238);
-
-        cxt.fillStyle='#FFEFDB';
-        cxt.fillRect(191,131,198,198);
-
-        cxt.fillStyle='#00CD00';
-        cxt.fillRect(211,151,158,158);
-
-        cxt.fillStyle='#0000CD';
-        cxt.fillRect(231,171,118,118);
-
-        cxt.fillStyle='#FF34B3';
-        cxt.fillRect(251,191,78,78);
-
-
-
-        cxt.strokeStyle = 'blue';
-	cxt.lineWidth = 1;
-        cxt.moveTo(190,130);
-	cxt.lineTo(190,130);
-	cxt.stroke();
-
-	cxt.strokeStyle = 'blue';
-	cxt.lineWidth = 1;
-	cxt.lineTo(390,130);
-	cxt.lineTo(390,330);
-        cxt.lineTo(190,330);
-        cxt.lineTo(190,130);
-	cxt.stroke();
-
-	cxt.strokeStyle = 'blue';
-	cxt.lineWidth = 1;
-        cxt.moveTo(210,150);
-	cxt.lineTo(370,150);
-	cxt.lineTo(370,310);
-        cxt.lineTo(210,310);
-        cxt.lineTo(210,150);
-	cxt.stroke();
   </script>
+  </center>
  </head>
  <body>
 </html>
-  
