@@ -1,104 +1,469 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <title>canvas</title>
-  <meta charset="utf-8">
-<center>
-  <canvas id="smile" width="800" height="800">
-    <p>Ваш браузер не поддерживает рисование.</p>
-  </canvas>
+   <head>
+      <style>
+         
+         {
+            border:black 1px solid;
+         }
+      </style>
+      <!--[IF LT IE 9]><script type="text/javascript" src = "excanvas.js" ></script><![endif]-->
+      <script type="text/javascript">
+         function setcanvas()
+         {
+            var canvas = document.getElementById("canvasarea");
+            if (canvas.getContext)
+            {
+               var ctx = canvas.getContext("2d");
+               drawcanvas(ctx);
+            }
+            else
+            {
+               alert("Canvas NOT supported");
+            }
+         }
+         
+         function drawcanvas(ctx)
+         {
 
-<script type="text/javascript">
-    var myCanvas = document.getElementById('smile');
+               //Shape0;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 15;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "round";
+               ctx.beginPath();
+               ctx.moveTo(96,234);
+               ctx.lineTo(166,234);
+               ctx.lineTo(166,264);
+               ctx.lineTo(96,264);
+               ctx.lineTo(96,234);
+               ctx.closePath();
+               ctx.stroke();
+               ctx.shadowOffsetX = 15;
+               ctx.shadowOffsetY = 15;
+               ctx.shadowBlur = 0;
+               ctx.shadowColor = "rgba(0,0,0,0)";
+               ctx.fillStyle = "rgba(255,255,255,1)";
+               ctx.fill();
 
-     var cxt = myCanvas.getContext('2d');
-	  // Рисуем прямоугольник
- 	cxt.fillStyle="#696969";
-	cxt.fillRect(5,125,450,450);
+               //Shape1;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 5;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(130,231);
+               ctx.lineTo(131,119);
+               ctx.stroke();
 
-	// Рисуем левую окружность 
-     cxt.beginPath();
-	 cxt.lineWidth = 5;
-     cxt.strokeStyle = "#fc0";
-     //cxt.fillStyle = "#fc0";
-     cxt.arc(220,300,100,200,Math.PI*2,true);
-     cxt.closePath();
-     cxt.stroke();
-	
-    // Рисуем правую окружность 
-     cxt.beginPath();
-	 cxt.lineWidth = 5;
-     cxt.strokeStyle = "#fc0";
-     //cxt.fillStyle = "#fc0";
-     cxt.arc(200,300,100,200,Math.PI*2,true);
-     cxt.closePath();
-     cxt.stroke();
-     
-	 // окружность по середине
-     cxt.beginPath();
-	 cxt.strokeStyle = "#3CB371";
-     cxt.arc(210,300,10,0,Math.PI*2,true);
-     cxt.closePath();
-     cxt.stroke();
-	 //верхняя окружность
-	 cxt.beginPath();
-	 cxt.strokeStyle = '#fc0';
-     cxt.arc(210,225,10,0,Math.PI*2,true);
-     cxt.closePath();
-	 cxt.stroke();
-     
-	 //нижняя окружность
-	 cxt.beginPath();
-     cxt.arc(210,370,10,0,Math.PI*2,true);
-     cxt.closePath();
-     cxt.stroke();
-	 
-	  //правая окружность по середине
-	 cxt.beginPath();
-     cxt.arc(270,300,10,0,Math.PI*2,true);
-     cxt.closePath();
-     cxt.stroke();
-	 
-	  //левая окружность по середине
-	 cxt.beginPath();
-     cxt.arc(145,300,10,0,Math.PI*2,true);
-     cxt.closePath();
-     cxt.stroke();
-	 
-	 //левая окр.внизу
-	 cxt.beginPath();
-	 cxt.strokeStyle = '#3CB371';
-     cxt.arc(170,410,15,0,Math.PI*2,true);
-     cxt.closePath();
-     cxt.stroke();
-	 
-	 //правая окр.внизу
-	 cxt.beginPath();
-     cxt.arc(250,408,15,0,Math.PI*2,true);
-     cxt.closePath();
-     cxt.stroke();
-	 
-	 //самая верхняя окружность
-	 cxt.beginPath();
-	 cxt.strokeStyle = 'red';
-     cxt.arc(210,190,15,0,Math.PI*2,true);
-     cxt.closePath();
-     cxt.stroke();
+               //Shape2;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 5;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(132,120);
+               ctx.lineTo(570,120);
+               ctx.lineTo(570,135);
+               ctx.lineTo(132,135);
+               ctx.lineTo(132,120);
+               ctx.closePath();
+               ctx.stroke();
+               ctx.shadowOffsetX = 15;
+               ctx.shadowOffsetY = 15;
+               ctx.shadowBlur = 0;
+               ctx.shadowColor = "rgba(0,0,0,0)";
+               ctx.fillStyle = "rgba(255,255,255,1)";
+               ctx.fill();
 
-	// стрелки 
+               
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 3;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(NaN,134);
+               ctx.lineTo(NaN,117);
+               ctx.stroke();
 
-   cxt.beginPath();
-   cxt.strokeStyle = 'yellow';
-	cxt.moveTo(218,290);
-	cxt.lineTo(265,250);
-	cxt.moveTo(218,310);
-	cxt.lineTo(250,370);
-	cxt.closePath();
-	cxt.stroke();
-   
+               
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 6;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(220,140);
+               ctx.lineTo(185,196);
+               ctx.lineTo(255,196);
+               ctx.lineTo(220,140);
+               ctx.closePath();
+               ctx.stroke();
+               ctx.shadowOffsetX = 15;
+               ctx.shadowOffsetY = 15;
+               ctx.shadowBlur = 0;
+               ctx.shadowColor = "rgba(0,0,0,0)";
+               ctx.fillStyle = "rgba(255,255,255,1)";
+               ctx.fill();
 
-  </script>
-  </center>
- </head>
- <body>
+               
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 1;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(222,119);
+               ctx.bezierCurveTo(227,119,231,123,231,128);
+               ctx.bezierCurveTo(231,133,227,137,222,137);
+               ctx.bezierCurveTo(217,137,213,133,213,128);
+               ctx.bezierCurveTo(213,123,217,119,222,119);
+               ctx.closePath();
+               ctx.stroke();
+               ctx.shadowOffsetX = 15;
+               ctx.shadowOffsetY = 15;
+               ctx.shadowBlur = 0;
+               ctx.shadowColor = "rgba(0,0,0,0)";
+               ctx.fillStyle = "rgba(24,7,7,1)";
+               ctx.fill();
+
+               //Shape6;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 1;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(310,119);
+               ctx.bezierCurveTo(315,119,319,123,319,128);
+               ctx.bezierCurveTo(319,132,315,136,310,136);
+               ctx.bezierCurveTo(305,136,301,132,301,128);
+               ctx.bezierCurveTo(301,123,305,119,310,119);
+               ctx.closePath();
+               ctx.stroke();
+               ctx.shadowOffsetX = 15;
+               ctx.shadowOffsetY = 15;
+               ctx.shadowBlur = 0;
+               ctx.shadowColor = "rgba(0,0,0,0)";
+               ctx.fillStyle = "rgba(8,0,0,1)";
+               ctx.fill();
+
+               //Shape7;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 1;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(390,119);
+               ctx.bezierCurveTo(390,NaN,390,NaN,390,NaN);
+               ctx.bezierCurveTo(390,NaN,390,NaN,390,NaN);
+               ctx.bezierCurveTo(390,NaN,389,NaN,390,NaN);
+               ctx.bezierCurveTo(389,NaN,389,NaN,390,NaN);
+               ctx.closePath();
+               ctx.stroke();
+               ctx.shadowOffsetX = 15;
+               ctx.shadowOffsetY = 15;
+               ctx.shadowBlur = 0;
+               ctx.shadowColor = "rgba(0,0,0,0)";
+               ctx.fillStyle = "rgba(255,255,255,1)";
+               ctx.fill();
+
+               //Shape8;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 1;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(399,118);
+               ctx.bezierCurveTo(405,118,409,122,409,127);
+               ctx.bezierCurveTo(409,132,405,136,399,136);
+               ctx.bezierCurveTo(393,136,389,132,389,127);
+               ctx.bezierCurveTo(389,122,393,118,399,118);
+               ctx.closePath();
+               ctx.stroke();
+               ctx.shadowOffsetX = 15;
+               ctx.shadowOffsetY = 15;
+               ctx.shadowBlur = 0;
+               ctx.shadowColor = "rgba(0,0,0,0)";
+               ctx.fillStyle = "rgba(22,5,5,1)";
+               ctx.fill();
+
+               //Shape9;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 1;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(490,117);
+               ctx.bezierCurveTo(496,117,500,121,500,127);
+               ctx.bezierCurveTo(500,132,496,136,490,136);
+               ctx.bezierCurveTo(484,136,480,132,480,127);
+               ctx.bezierCurveTo(480,121,484,117,490,117);
+               ctx.closePath();
+               ctx.stroke();
+               ctx.shadowOffsetX = 15;
+               ctx.shadowOffsetY = 15;
+               ctx.shadowBlur = 0;
+               ctx.shadowColor = "rgba(0,0,0,0)";
+               ctx.fillStyle = "rgba(30,4,4,1)";
+               ctx.fill();
+
+               //Shape10;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 1;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(NaN,NaN);
+               ctx.stroke();
+
+               //Shape11;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 6;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(570,118);
+               ctx.lineTo(569,136);
+               ctx.stroke();
+
+               //Shape12;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 1;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(NaN,NaN);
+               ctx.stroke();
+
+               //Shape13;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 1;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(NaN,NaN);
+               ctx.closePath();
+               ctx.stroke();
+               ctx.shadowOffsetX = 15;
+               ctx.shadowOffsetY = 15;
+               ctx.shadowBlur = 0;
+               ctx.shadowColor = "rgba(0,0,0,0)";
+               ctx.fillStyle = "rgba(255,255,255,1)";
+               ctx.fill();
+
+               //Shape14;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 1;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(NaN,NaN);
+               ctx.lineTo(NaN,NaN);
+               ctx.stroke();
+
+               //Shape16;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(570,137);
+               ctx.lineTo(570,148);
+               ctx.stroke();
+
+               //Shape17;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(570,153);
+               ctx.lineTo(570,164);
+               ctx.stroke();
+
+               //Shape18;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(570,168);
+               ctx.lineTo(570,179);
+               ctx.stroke();
+
+               //Shape19;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(570,183);
+               ctx.lineTo(570,193);
+               ctx.stroke();
+
+               //Shape21;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(NaN,194);
+               ctx.lineTo(NaN,206);
+               ctx.stroke();
+
+               //Shape29;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(570,202);
+               ctx.lineTo(570,212);
+               ctx.stroke();
+
+               //Shape30;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(550,222);
+               ctx.lineTo(560,222);
+               ctx.stroke();
+
+               //Shape31;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(570,222);
+               ctx.lineTo(580,222);
+               ctx.stroke();
+
+               //Shape32;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(590,222);
+               ctx.lineTo(600,222);
+               ctx.stroke();
+
+               //Shape33;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(540,222);
+               ctx.lineTo(540,232);
+               ctx.stroke();
+
+               //Shape34;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(610,222);
+               ctx.lineTo(610,232);
+               ctx.stroke();
+
+               //Shape35;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(540,242);
+               ctx.lineTo(540,252);
+               ctx.stroke();
+
+               //Shape36;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(540,262);
+               ctx.lineTo(550,262);
+               ctx.stroke();
+
+               //Shape37;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(560,262);
+               ctx.lineTo(570,262);
+               ctx.stroke();
+
+               //Shape38;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(590,262);
+               ctx.lineTo(580,262);
+               ctx.stroke();
+
+               //Shape39;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(610,262);
+               ctx.lineTo(600,262);
+               ctx.stroke();
+
+               //Shape40;
+               ctx.shadowColor ="rgba(0,0,0,0)";
+               ctx.strokeStyle ="rgba(0,0,0,1)";
+               ctx.lineWidth = 4;
+               ctx.lineCap = "butt";
+               ctx.lineJoin = "miter";
+               ctx.beginPath();
+               ctx.moveTo(610,252);
+               ctx.lineTo(610,242);
+               ctx.stroke();
+         }
+      </script>
+   </head>
+   <body onload="setcanvas()">
+      <canvas id="canvasarea" width="800" height="500"></canvas>
+   </body>
 </html>
